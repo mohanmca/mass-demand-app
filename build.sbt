@@ -2,21 +2,23 @@ name := """mass-demand-app"""
 
 version := "1.0-SNAPSHOT"
 
-lazy val root = (project in file(".")).enablePlugins(PlayScala)
-
 scalaVersion := "2.11.6"
 
+//ivyScala := ivyScala.value map { _.copy(overrideScalaVersion = true) }
+
+lazy val root = (project in file(".")).enablePlugins(PlayScala)
+ 
 libraryDependencies ++= Seq(
   jdbc,
   cache,
-  ws,
-  specs2 % Test
+  ws
 )
 
-libraryDependencies += "nikias" % "massdemand_2.11" % "1.0-SNAPSHOT" withSources()
+libraryDependencies ++= Seq(
+  "org.webjars" %% "webjars-play" % "2.4.0-1",
+  "org.webjars" % "bootstrap" % "3.3.4",
+  "org.webjars" % "knockout" % "3.3.0",
+  "nikias" % "massdemand_2.11" % "1.0-SNAPSHOT" withSources()  
+)
 
-resolvers += "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases"
-
-// Play provides two styles of routers, one expects its actions to be injected, the
-// other, legacy style, accesses its actions statically.
-routesGenerator := InjectedRoutesGenerator
+EclipseKeys.createSrc := EclipseCreateSrc.All

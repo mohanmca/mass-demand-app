@@ -2,7 +2,7 @@ package controllers
 
 import play.api.mvc._
 
-object Application extends Controller {
+object MainController extends Controller {
 
   def index() = Action {
     Ok(views.html.index())
