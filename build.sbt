@@ -1,4 +1,4 @@
-name := """new-app"""
+name := """mass-demand-app"""
 
 version := "1.0-SNAPSHOT"
 
@@ -12,6 +12,8 @@ libraryDependencies ++= Seq(
   ws,
   specs2 % Test
 )
+
+libraryDependencies += "nikias" % "massdemand_2.11" % "1.0-SNAPSHOT" withSources()
 
 resolvers += "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases"
 

@@ -1,5 +1,5 @@
 <projectDescription>
-  <name>new-app</name>
+  <name>mass-demand-app</name>
   <buildSpec>
     <buildCommand>
       <name>org.scala-ide.sdt.core.scalabuilder</name>

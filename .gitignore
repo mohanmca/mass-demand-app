@@ -1,8 +1,7 @@
-logs
-target
-/.idea
-/.idea_modules
-/.classpath
-/.project
-/.settings
-/RUNNING_PID
+/bin/
+/target/
+/.settings/
+/.worksheet/
+/project/
+.cache-main
+.cache-test
